@@ -25,6 +25,7 @@ const connectDB = async () => {
 // Middleware to ensure DB connection
 app.use(async (req, res, next) => {
     await connectDB();
+    console.log('MongoDB connected');
     next();
 });
 
